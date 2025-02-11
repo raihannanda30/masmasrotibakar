@@ -1,0 +1,338 @@
+<html>
+<head>
+    <title>Mas Mas Roti Bakar</title>
+    <link rel="icon" href="assets/logo.png" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <style>
+        body {
+            font-family: 'Roboto Condensed', sans-serif;
+        }
+        /* Menyembunyikan scrollbar pada menu */
+        .overflow-x-auto::-webkit-scrollbar {
+            display: none; /* Untuk Chrome, Safari, dan Opera */
+        }
+        .overflow-x-auto {
+            -ms-overflow-style: none;  /* Untuk Internet Explorer dan Edge */
+            scrollbar-width: none;  /* Untuk Firefox */
+        }
+        /* Animasi untuk hero section */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 1s forwards;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+    <!-- Navbar -->
+    <nav class="bg-[#4d3721] p-4">
+        <div class="flex justify-between items-center">
+            <a href="#" class="text-white text-2xl font-bold flex items-center">
+                <img src="assets/logo.png" alt="Logo" class="h-8 mr-2"> Mas Mas Roti Bakar
+            </a>
+            <div class="hidden md:flex space-x-6">
+                <a href="#home" class="text-white hover:bg-yellow-400 px-4 py-2 rounded transition duration-300 flex items-center">
+                    <i class="fas fa-home mr-2"></i> Home
+                </a>
+                <a href="#about" class="text-white hover:bg-yellow-400 px-4 py-2 rounded transition duration-300 flex items-center">
+                    <i class="fas fa-info-circle mr-2"></i> Tentang Kami
+                </a>
+                <a href="#menu" class="text-white hover:bg-yellow-400 px-4 py-2 rounded transition duration-300 flex items-center">
+                    <i class="fas fa-utensils mr-2"></i> Menu
+                </a>
+                <a href="#contact" class="text-white hover:bg-yellow-400 px-4 py-2 rounded transition duration-300 flex items-center">
+                    <i class="fas fa-envelope mr-2"></i> Hubungi Kami
+                </a>
+            </div>
+            <div class="md:hidden">
+                <button id="menu-btn" class="text-white focus:outline-none hover:bg-gray-700 p-2 rounded transition duration-300">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden">
+            <a href="#home" class="block text-white py-2 px-4 flex items-center menu-item hover:bg-yellow-400 rounded transition duration-300">
+                <i class="fas fa-home mr-2"></i> Home
+            </a>
+            <a href="#about" class="block text-white py-2 px-4 flex items-center menu-item hover:bg-yellow-400 rounded transition duration-300">
+                <i class="fas fa-info-circle mr-2"></i> Tentang Kami
+            </a>
+            <a href="#menu" class="block text-white py-2 px-4 flex items-center menu-item hover:bg-yellow-400 rounded transition duration-300">
+                <i class="fas fa-utensils mr-2"></i> Menu
+            </a>
+            <a href="#contact" class="block text-white py-2 px-4 flex items-center menu-item hover:bg-yellow-400 rounded transition duration-300">
+                <i class="fas fa-envelope mr-2"></i> Hubungi Kami
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative bg-yellow-400">
+        <img src="assets/herobg.jpg" alt="A deliciously toasted bread with various toppings" class="w-full h-full object-cover opacity-50" width="1920" height="1080">
+        <div class="absolute inset-0 flex flex-col items-center justify-center text-center p-6">
+            <h1 class="text-5xl font-bold text-[#4d3721] fade-in">Mas Mas Roti Bakar</h1>
+            <p class="mt-4 text-xl text-white fade-in">Outlet Roti bakar Terbaik dan Terenak di Kota Kalian <br>
+                Menggunakan roti asli dari Bandung yaitu Kota asli makanan Roti Bakar <br>
+                Selai selai yang kental dan enak serta sehat
+                Dibakar menggunakan Api sedang dan Mentega yang berkualitas <br>
+            </p> <br>
+            <h2 class="text-2xl font-bold text-[#4d3721] fade-in">"RASAKAN SENSASI MANIS DAN GURIH DISETIAP GIGITAN NYA".</h2>
+            <a href="#menu" class="mt-6 px-8 py-3 bg-[#4d3721] hover:bg-yellow-400 text-white font-semibold rounded-full fade-in">Lihat Menu</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-12 bg-white">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 fade-in">
+                <h2 class="text-3xl font-bold text-[#4d3721]">Tentang Kami</h2>
+                <p class="mt-4 text-[#4d3721]">Mas Mas Roti Bakar adalah tempat terbaik untuk menikmati roti bakar dengan berbagai topping yang lezat. Kami menggunakan bahan-bahan berkualitas tinggi untuk memastikan setiap gigitan adalah kenikmatan.</p>
+                <p class="mt-4 text-[#4d3721]">Nikmati suasana yang nyaman dan hangat di tempat kami, dengan pelayanan ramah dari staf kami yang siap melayani Anda dengan senyuman.</p>
+            </div>
+            <div class="md:w-1/2 mt-8 md:mt-0 fade-in">
+                <img src="assets/rotibakar.jpg" alt="Interior of Mas Mas Roti Bakar with cozy seating" class="w-full h-auto object-cover rounded-lg" width="500" height="500">
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="py-12 bg-[#4d3721]">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-white">Daftar Menu</h2>
+            <div class="mt-8 flex overflow-x-auto space-x-6">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden min-w-[200px]">
+                    <img src="assets/coklatkeju.jpeg" alt="Toasted bread with chocolate and cheese topping" class="w-full h-32 object-cover" width="100" height="100">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-[#4d3721]">Roti Bakar Coklat Keju</h3>
+                        <p class="mt-10 text-gray-600">
+                            <span class="text-red-400 font-bold text-xl">Rp 20.000</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden min-w-[200px]">
+                    <img src="https://storage.googleapis.com/a1aa/image/HECtncUfb23lGklJfhObFaW-Rno0ncHPhMG_Ee4hh30.jpg" alt="Toasted bread with strawberry jam and cream" class="w-full h-32 object-cover" width="300" height="200">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-[#4d3721]">Roti Bakar Selai Stroberi</h3>
+                        <p class="mt-3 text-gray-600">
+                            <span class="text-red-400 font-bold text-xl">Rp 18.000</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden min-w-[200px]">
+                    <img src="assets/pisangkacang.jpeg" alt="Toasted bread with peanut butter and banana slices" class="w-full h-32 object-cover" width="300" height="200">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-[#4d3721]">Roti Bakar Selai Kacang Pisang</h3>
+                        <p class="mt-3 text-gray-600">
+                            <span class="text-red-400 font-bold text-xl">Rp 22.000</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden min-w-[200px]">
+                    <img src="assets/selaiblueverry.jpg" alt="Toasted bread with avocado and condensed milk" class="w-full h-32 object-cover" width="300" height="200">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-[#4d3721]">Roti Bakar Selai Blueberry</h3>
+                        <p class="mt-3 text-gray-600">
+                            <span class="text-red-400 font-bold text-xl">Rp 25.000</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden min-w-[200px]">
+                    <img src="assets/selaisrikaya.jpg" alt="Toasted bread with chocolate and cheese topping" class="w-full h-32 object-cover" width="300" height="200">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-[#4d3721]">Roti Bakar Selai Srikaya</h3>
+                        <p class="mt-10 text-gray-600">
+                            <span class="text-red-400 font-bold text-xl">Rp 20.000</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden min-w-[200px]">
+                    <img src="assets/rotibakarpandan.jpg" alt="Toasted bread with strawberry jam and cream" class="w-full h-32 object-cover" width="300" height="200">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-[#4d3721]">Roti Bakar Pandan</h3>
+                        <p class="mt-3 text-gray-600">
+                            <span class="text-red-400 font-bold text-xl mt-7">Rp 18.000</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden min-w-[200px]">
+                    <img src="assets/selaikacang.jpg" alt="Toasted bread with peanut butter and banana slices" class="w-full h-32 object-cover" width="300" height="200">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-[#4d3721]">Roti Bakar Selai Kacang</h3>
+                        <p class="mt-3 text-gray-600">
+                            <span class="text-red-400 font-bold text-xl">Rp 22.000</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden min-w-[200px]">
+                    <img src="assets/campur.jpg" alt="Toasted bread with avocado and condensed milk" class="w-full h-32 object-cover" width="300" height="200">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-[#4d3721]">Roti Bakar Campur</h3>
+                        <p class="mt-3 text-gray-600">
+                            <span class="text-red-400 font-bold text-xl">Rp 25.000</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial Section -->
+    <section id="testimonials" class="py-12 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-[#4d3721]">Kata Mereka tentang Mas Mas Roti Bakar</h2>
+            <p class="mt-2 text-center text-gray-600">Apa kata pelanggan kami tentang Mas Mas Roti Bakar:</p>
+            <div class="mt-8 flex overflow-x-auto space-x-6">
+                <div class="border p-4 rounded-md shadow-md bg-[#4d3721] hover:shadow-lg transition-shadow duration-300">
+                    <div class="flex items-center mb-4">
+                        <img src="assets/avatar.jpg" alt="User 1" class="w-12 h-12 rounded-full mr-3">
+                        <div>
+                            <h3 class="font-semibold text-yellow-500">Aksara Gautama</h3>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 text-white">"Roti bakar di sini sangat lezat! Saya suka variasi toppingnya. Tempat yang nyaman untuk bersantai!"</p>
+                    <div class="mt-4 flex justify-center">
+                        <span class="text-yellow-500"><i class="fas fa-bread-slice"></i></span>
+                        <span class="text-yellow-500"><i class="fas fa-bread-slice"></i></span>
+                        <span class="text-yellow-500"><i class="fas fa-bread-slice"></i></span>
+                        <span class="text-yellow-500"><i class="fas fa-bread-slice"></i></span>
+                        <span class="text-yellow-500"><i class="fas fa-bread-slice"></i></span>
+                    </div>
+                </div>
+                <div class="border p-4 rounded-md shadow-md bg-[#4d3721] hover:shadow-lg transition-shadow duration-300">
+                    <div class="flex items-center mb-4">
+                        <img src="assets/avatar.jpg" alt="User 2" class="w-12 h-12 rounded-full mr-3">
+                        <div>
+                            <h3 class="font-semibold text-yellow-500">Anumertas Laksana</h3>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 text-white">"Saya sangat menyukai latte di Teras Coffee. Baristanya sangat ramah dan selalu membuat saya merasa diterima."</p>
+                    <div class="mt-4 flex justify-center">
+                        <span class="text-yellow-500"><i class="fas fa-bread-slice"></i></span>
+                        <span class="text-yellow-500"><i class="fas fa-bread-slice"></i></span>
+                        <span class="text-yellow-500"><i class="fas fa-bread-slice"></i></span>
+                        <span class="text-yellow-500"><i class="fas fa-bread-slice"></i></span>
+                        <span class="text-yellow-500"><i class="fas fa-bread-slice"></i></span>
+                    </div>
+                </div>
+                <div class="border p-4 rounded-md shadow-md bg-[#4d3721] hover:shadow-lg transition-shadow duration-300">
+                    <div class="flex items-center mb-4">
+                        <img src="assets/avatar.jpg" alt="User 3" class="w-12 h-12 rounded-full mr-3">
+                        <div>
+                            <h3 class="font-semibold text-yellow-500">Fanaya Bumantara</h3>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 text-white">"Tempat yang sempurna untuk bertemu dengan teman-teman. Kopi dinginnya sangat menyegarkan, terutama di hari yang panas."</p>
+                    <div class="mt-4 flex justify-center">
+                        <span class="text-yellow-500"><i class="fas fa-bread-slice"></i></span>
+                        <span class="text-yellow-500"><i class="fas fa-bread-slice"></i></span>
+                        <span class="text-yellow-500"><i class="fas fa-bread-slice"></i></span>
+                        <span class="text-yellow-500"><i class="fas fa-bread-slice"></i></span>
+                        <span class="text-yellow-500"><i class="fas fa-bread-slice"></i></span>
+                    </div>
+                </div>
+                <div class="border p-4 rounded-md shadow-md bg-[#4d3721] hover:shadow-lg transition-shadow duration-300">
+                    <div class="flex items-center mb-4">
+                        <img src="assets/avatar.jpg" alt="User 4" class="w-12 h-12 rounded-full mr-3">
+                        <div>
+                            <h3 class="font-semibold text-yellow-500">Rina Sari</h3>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 text-white">"Roti bakar dengan selai coklatnya sangat menggoda! Pasti akan kembali lagi."</p>
+                    <div class="mt-4 flex justify-center">
+                        <span class="text-yellow-500"><i class="fas fa-bread-slice"></i></span>
+                        <span class="text-yellow-500"><i class="fas fa-bread-slice"></i></span>
+                        <span class="text-yellow-500"><i class="fas fa-bread-slice"></i></span>
+                        <span class="text-yellow-500"><i class="fas fa-bread-slice"></i></span>
+                        <span class="text-yellow-500"><i class="fas fa-bread-slice"></i></span>
+                    </div>
+                </div>
+                <div class="border p-4 rounded-md shadow-md bg-[#4d3721] hover:shadow-lg transition-shadow duration-300">
+                    <div class="flex items-center mb-4">
+                        <img src="assets/avatar.jpg" alt="User 5" class="w-12 h-12 rounded-full mr-3">
+                        <div>
+                            <h3 class="font-semibold text-yellow-500">Diana Putri</h3>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 text-white">"Sangat suka suasana di sini! Roti bakar dan kopi yang enak membuat saya betah berlama-lama."</p>
+                    <div class="mt-4 flex justify-center">
+                        <span class="text-yellow-500"><i class="fas fa-bread-slice"></i></span>
+                        <span class="text-yellow-500"><i class="fas fa-bread-slice"></i></span>
+                        <span class="text-yellow-500"><i class="fas fa-bread-slice"></i></span>
+                        <span class="text-yellow-500"><i class="fas fa-bread-slice"></i></span>
+                        <span class="text-yellow-500"><i class="fas fa-bread-slice"></i></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-12 bg-white">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2">
+                <img src="assets/toko.jpg" alt="Map showing the location of Mas Mas Roti Bakar" class="w-full h-64 object-cover rounded-lg" width="600" height="400">
+            </div>
+            <div class="md:w-1/2 mt-8 md:mt-0 md:pl-8">
+                <h2 class="text-3xl font-bold text-[#4d3721]">Hubungi Kami</h2>
+                <p class="mt-4 text-[#4d3721]">Jika Anda memiliki pertanyaan atau ingin melakukan pemesanan, jangan ragu untuk menghubungi kami.</p>
+                <p class="mt-4 text-red-600"><i class="fas fa-map-marker-alt mr-2"></i> Alamat: Jl. Roti Bakar No. 123, Jakarta</p>
+                <p class="mt-4 text-green-600"><i class="fas fa-phone-alt mr-2"></i> No HP: 0812-3456-7890</p>
+                <p class="mt-4 text-gray-600"><i class="fas fa-envelope mr-2"></i> Email: info@masmasrotibakar.com</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-6 bg-[#4d3721] text-white">
+        <div class="container mx-auto px-6 text-center">
+            <p>© 2025 Mas Mas Roti Bakar. All rights reserved.</p>
+            <div class="mt-4">
+                <a href="#" class="text-white mx-2"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="text-white mx-2"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-white mx-2"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('menu-btn').addEventListener('click', function() {
+            var menu = document.getElementById('mobile-menu');
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+            } else {
+                menu.classList.add('hidden');
+            }
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const elements = document.querySelectorAll('.fade-in');
+            elements.forEach((el, index) => {
+                el.style.animationDelay = `${index * 0.2}s`; // Delay untuk setiap elemen
+                el.classList.add('fade-in');
+            });
+        });
+
+        // Intersection Observer untuk animasi section "Tentang Kami"
+        const aboutSection = document.querySelector('#about');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        });
+
+        observer.observe(aboutSection);
+    </script>
+</body>
+</html>
