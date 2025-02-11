@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <head>
     <title>Mas Mas Roti Bakar</title>
@@ -35,7 +36,7 @@
 </head>
 <body class="bg-gray-100 text-gray-800">
     <!-- Navbar -->
-    <nav class="bg-[#4d3721] p-4">
+    <nav class="bg-[#4d3721] p-4 fixed w-full z-10 top-0">
         <div class="flex justify-between items-center">
             <a href="#" class="text-white text-2xl font-bold flex items-center">
                 <img src="assets/logo.png" alt="Logo" class="h-8 mr-2"> Mas Mas Roti Bakar
@@ -77,7 +78,7 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="relative bg-yellow-400">
+    <section id="home" class="relative bg-yellow-400 mt-16">
         <img src="assets/herobg.jpg" alt="A deliciously toasted bread with various toppings" class="w-full h-full object-cover opacity-50" width="1920" height="1080">
         <div class="absolute inset-0 flex flex-col items-center justify-center text-center p-6">
             <h1 class="text-5xl font-bold text-[#4d3721] fade-in">Mas Mas Roti Bakar</h1>
@@ -191,7 +192,7 @@
         <div class="container mx-auto px-6">
             <h2 class="text-3xl font-bold text-center text-[#4d3721]">Kata Mereka tentang Mas Mas Roti Bakar</h2>
             <p class="mt-2 text-center text-gray-600">Apa kata pelanggan kami tentang Mas Mas Roti Bakar:</p>
-            <div class="mt-8 flex overflow-x-auto space-x-6">
+            <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div class="border p-4 rounded-md shadow-md bg-[#4d3721] hover:shadow-lg transition-shadow duration-300">
                     <div class="flex items-center mb-4">
                         <img src="assets/avatar.jpg" alt="User 1" class="w-12 h-12 rounded-full mr-3">
@@ -304,6 +305,11 @@
         </div>
     </footer>
 
+    <!-- Tombol Kembali ke Atas -->
+    <button id="back-to-top" class="fixed bottom-4 right-4 bg-[#4d3721] text-white p-3 rounded-full shadow-lg hover:bg-yellow-400 transition duration-300 hidden">
+        <i class="fas fa-bread-slice"></i>
+    </button>
+
     <script>
         document.getElementById('menu-btn').addEventListener('click', function() {
             var menu = document.getElementById('mobile-menu');
@@ -333,6 +339,21 @@
         });
 
         observer.observe(aboutSection);
+
+        // Menampilkan tombol kembali ke atas saat scroll
+        window.onscroll = function() {
+            const button = document.getElementById('back-to-top');
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                button.classList.remove('hidden');
+            } else {
+                button.classList.add('hidden');
+            }
+        };
+
+        // Mengatur fungsionalitas tombol kembali ke atas
+        document.getElementById('back-to-top').addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
     </script>
 </body>
 </html>
